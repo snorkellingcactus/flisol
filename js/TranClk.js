@@ -1,0 +1,62 @@
+TranClk=function(cfg,ret)
+{
+	this.fnFin=this.fnEsc=function(){return 0};
+	this.enCurso=0;
+	this.x=0;
+	this.xmax=0;
+	this.inc=1;
+	this.ret=ret;
+	this.cfg=cfg;
+	this.forMax=cfg.length;
+	for(var c=0;c<cfg.length;c++)
+	{
+		if(cfg[c].xmax>this.xmax)
+		{
+			this.xmax=cfg[c].xmax;
+		}
+	}
+	c=null;
+	this.anima=function()
+	{
+		for(j=0;j<this.forMax;j++)
+		{
+			obj=cfg[j];
+			if(obj.x+this.inc<=obj.xmax&&obj.x+this.inc>=0)
+			{
+				obj.x+=this.inc;
+				obj.obj.style[obj.prop]=obj.calc()[1]+obj.uni;
+			}
+		}
+		this.x+=this.inc;
+		if(this.x==this.xmax||this.x==0)
+		{
+			return 0;
+		}
+	}
+	this.preAnima=function()
+	{
+		if(this.anima()!=0)
+		{
+			this.tOut=setTimeout(this.preAnima.bind(this),this.ret);
+		}
+		else
+		{
+			clearTimeout(this.tOut);
+			this.enCurso=0;
+			this.fnFin();
+			return 0;
+		}
+	}
+	this.detona=function()
+	{
+		if(this.enCurso)
+		{
+			this.fnEsc();
+		}
+		else
+		{
+			this.enCurso=1;
+			this.preAnima();
+		}
+	}
+}
