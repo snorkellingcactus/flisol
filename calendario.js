@@ -3,8 +3,8 @@ CalFlisol=function()
 	this.tiempo=new Date();
 	
 	this.vista="mes";
-	this.meses=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
-	this.dias=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+	this.meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+	this.dias=["Do","Lu","Ma","Mi","Ju","Vi","Sá"];
 	
 	this.caja=document.createElement("div");
 	
@@ -47,7 +47,7 @@ CalFlisol.prototype.vistas.mes=function(objDate)
 		{
 			var td=document.createElement("td");
 			var cajaTd=document.createElement("div");
-			var cajaTxt=document.createElement("h3");
+			var cajaTxt=document.createElement("p");
 			
 			var nCelda=d+1+r*7;
 			var tdTxt=nCelda-nInhabil+1;
@@ -75,7 +75,7 @@ CalFlisol.prototype.vistas.mes=function(objDate)
 	for(var h=0;h<7;h++)
 	{
 		var th=document.createElement("th");
-		var thTxt=document.createElement("h3");
+		var thTxt=document.createElement("p");
 		
 		thTxt.innerHTML=this.dias[h];
 		
@@ -91,7 +91,7 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 	var tbody=document.createElement("tbody");
 	var theadTr=document.createElement("tr");
 	var theadTh=document.createElement("th")
-	var theadTxt=document.createElement("h3");
+	var theadTxt=document.createElement("p");
 	
 	tabla.appendChild(thead);
 	tabla.appendChild(tbody);
@@ -109,7 +109,7 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 			var tfoot=document.createElement("tfoot");
 			var tfootTr=document.createElement("tr");
 			var tfootTd=document.createElement("td");
-			var tfootTxt=document.createElement("h3");
+			var tfootTxt=document.createElement("p");
 			var tablaMes=this.vistas.mes.bind(this)
 			(
 				new Date

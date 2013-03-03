@@ -10,34 +10,51 @@
 	width:100%;
 	height:100%;
 	border-radius:5px;
-	background-color:black;
 }
-.CalFlisol thead, .CalFlisol tfoot
+.mes
 {
 	text-align:center;
-	background-color:dimgrey
+	background-color:white;
+	border-spacing:0px;
+}
+.ano thead th
+{
+	background-color:darkgray;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+.mes thead th
+{
+	background-color:white;
+	border-radius:5px;
 }
 .dia,.inhabil,.evento
 {
 	background-color:white;
 	height:100%;
-	border-radius:2px;
 	text-align: center;
+	border: 2px solid white;
+}
+.dia p
+{
+	width:100%;
 }
 .inhabil
 {
-	background-color:silver;
+	background-color:white;
+	color:white;
 }
 .dia:hover
 {
-	background-color:lightblue;
-}
-.dia h3
-{
-	vertical-align: middle;
-	width:100%;
+	font-weight:bold;
+	border:1px solid white;
+	outline:1px solid silver;
 }
 .evento
 {
 	background-color:blue;
+}
+.ano
+{
+	background-color:transparent;
 }
