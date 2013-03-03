@@ -32,10 +32,19 @@ CalFlisol.prototype.vistas.mes=function(objDate)
 	var thead=document.createElement("thead");
 	var tbody=document.createElement("tbody");
 	var theadTr=document.createElement("tr");
+	var theadTr2=document.createElement("tr");
+	var theadTh2=document.createElement("th");
+	var theadMes=document.createElement("p");
 
 	tabla.appendChild(thead);
 	tabla.appendChild(tbody);
+	theadTh2.appendChild(theadMes);
+	theadTr2.appendChild(theadTh2);
+	thead.appendChild(theadTr2);
 	thead.appendChild(theadTr);
+	
+	theadMes.innerHTML=this.meses[objDate.getMonth()];
+	theadTh2.setAttribute("colspan","7");
 	
 	tabla.setAttribute("class","mes");
 	
@@ -98,18 +107,14 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 	thead.appendChild(theadTr);
 	
 	
-	for(var r=0;r<4;r++)
+	for(var r=0;r<2;r++)
 	{
 		var tr=document.createElement("tr");
-		for(var d=0;d<3;d++)
+		for(var d=0;d<6;d++)
 		{
 			var nCelda=d+r*3;
 			window.console.log(nCelda);
 			var td=document.createElement("td");
-			var tfoot=document.createElement("tfoot");
-			var tfootTr=document.createElement("tr");
-			var tfootTd=document.createElement("td");
-			var tfootTxt=document.createElement("p");
 			var tablaMes=this.vistas.mes.bind(this)
 			(
 				new Date
@@ -119,13 +124,7 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 					1
 				)
 			);
-			tfootTd.setAttribute("colspan","7");
 			
-			tfootTxt.innerHTML=this.meses[nCelda];
-			tfootTd.appendChild(tfootTxt);
-			tfootTr.appendChild(tfootTd);
-			tfoot.appendChild(tfootTr);
-			tablaMes.appendChild(tfoot);
 			td.appendChild(tablaMes);
 			tr.appendChild(td);
 		}
@@ -133,7 +132,7 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 	};
 
 	tabla.setAttribute("class","ano");
-	theadTh.setAttribute("colspan","3");
+	theadTh.setAttribute("colspan","6");
 	
 	theadTxt.innerHTML=objDate.getFullYear();
 	theadTh.appendChild(theadTxt);

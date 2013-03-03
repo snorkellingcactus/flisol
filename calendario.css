@@ -1,60 +1,55 @@
 .CalFlisol
 {
-	width:60%;
+	width:96%;
 	height:60%;
 	margin-left:2%;
-	margin-top:2%
+	margin-top:2%;
+	background-color:silver;
+	border:2px solid gray;
+	border-radius:5px;
+	height:auto;
 }
 .CalFlisol table
 {
 	width:100%;
 	height:100%;
-	border-radius:5px;
+	background-color:transparent;
 }
 .mes
 {
 	text-align:center;
-	background-color:white;
 	border-spacing:0px;
+	font-family:georgia;
 }
-.ano thead th
+.ano thead *
 {
-	background-color:darkgray;
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
+	height:0px;
+	overflow:hidden;
 }
-.mes thead th
+.ano .mes thead *
 {
-	background-color:white;
-	border-radius:5px;
+	overflow:visible;
+	height:auto;
 }
 .dia,.inhabil,.evento
 {
-	background-color:white;
-	height:100%;
-	text-align: center;
-	border: 2px solid white;
-}
-.dia p
-{
-	width:100%;
+	border: 2px solid transparent;
 }
 .inhabil
 {
-	background-color:white;
-	color:white;
+	color:transparent;
 }
 .dia:hover
 {
 	font-weight:bold;
-	border:1px solid white;
-	outline:1px solid silver;
+	border:0px solid;
 }
 .evento
 {
-	background-color:blue;
+	background-color:dimgray;
+	border-radius:3px;
 }
 .ano
 {
-	background-color:transparent;
+	border-spacing:20px;
 }
