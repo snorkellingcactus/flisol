@@ -1,8 +1,8 @@
 .CalFlisol
 {
-	width:80%;
-	height:80%;
-	margin-left:10%;
+	width:60%;
+	height:60%;
+	margin-left:2%;
 	margin-top:2%
 }
 .CalFlisol table
@@ -12,11 +12,16 @@
 	border-radius:5px;
 	background-color:black;
 }
-.dia,.inhabil
+.CalFlisol thead, .CalFlisol tfoot
+{
+	text-align:center;
+	background-color:dimgrey
+}
+.dia,.inhabil,.evento
 {
 	background-color:white;
 	height:100%;
-	border-radius:3px;
+	border-radius:2px;
 	text-align: center;
 }
 .inhabil
@@ -30,4 +35,9 @@
 .dia h3
 {
 	vertical-align: middle;
+	width:100%;
+}
+.evento
+{
+	background-color:blue;
 }
