@@ -3,7 +3,7 @@
 	width:96%;
 	margin-left:2%;
 	margin-top:2%;
-	background-color:silver;
+	background-image: url("./img/fondo_contenido.png");
 	border:2px solid gray;
 	border-radius:5px;
 	height:auto;

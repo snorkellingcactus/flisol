@@ -65,7 +65,7 @@ a{font-weight:bold;color:black;font-style:oblique;}
 	padding:0% 2% 2% 2%;
 	border:2px solid dimgray;
 	border-radius:5px;
-	background-color:silver;
+	background-image: url("./img/fondo_contenido.png")
 }
 .contenido h5
 {
