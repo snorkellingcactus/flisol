@@ -96,15 +96,9 @@ CalFlisol.prototype.vistas.mes=function(objDate)
 CalFlisol.prototype.vistas.ano=function(objDate)
 {
 	var tabla=document.createElement("table");
-	var thead=document.createElement("thead");
 	var tbody=document.createElement("tbody");
-	var theadTr=document.createElement("tr");
-	var theadTh=document.createElement("th")
-	var theadTxt=document.createElement("p");
 	
-	tabla.appendChild(thead);
 	tabla.appendChild(tbody);
-	thead.appendChild(theadTr);
 	
 	
 	for(var r=0;r<2;r++)
@@ -113,7 +107,6 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 		for(var d=0;d<6;d++)
 		{
 			var nCelda=d+r*3;
-			window.console.log(nCelda);
 			var td=document.createElement("td");
 			var tablaMes=this.vistas.mes.bind(this)
 			(
@@ -132,13 +125,6 @@ CalFlisol.prototype.vistas.ano=function(objDate)
 	};
 
 	tabla.setAttribute("class","ano");
-	theadTh.setAttribute("colspan","6");
-	
-	theadTxt.innerHTML=objDate.getFullYear();
-	theadTh.appendChild(theadTxt);
-	theadTr.appendChild(theadTh);
-	thead.appendChild(theadTr);
-	tabla.appendChild(thead);
 	tabla.appendChild(tbody);
 	
 	return tabla;

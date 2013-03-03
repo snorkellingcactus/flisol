@@ -1,7 +1,6 @@
 .CalFlisol
 {
 	width:96%;
-	height:60%;
 	margin-left:2%;
 	margin-top:2%;
 	background-color:silver;
@@ -12,28 +11,12 @@
 .CalFlisol table
 {
 	width:100%;
-	height:100%;
 	background-color:transparent;
 }
 .mes
 {
 	text-align:center;
-	border-spacing:0px;
 	font-family:georgia;
-}
-.ano thead *
-{
-	height:0px;
-	overflow:hidden;
-}
-.ano .mes thead *
-{
-	overflow:visible;
-	height:auto;
-}
-.dia,.inhabil,.evento
-{
-	border: 2px solid transparent;
 }
 .inhabil
 {
@@ -42,7 +25,6 @@
 .dia:hover
 {
 	font-weight:bold;
-	border:0px solid;
 }
 .evento
 {
