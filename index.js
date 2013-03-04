@@ -55,7 +55,6 @@ Desp=function(imgSrcs,urls,tits,descs,alts,FX)
 	this.cont.appendChild(this.contDer);
 	
 	//Contadores.
-	this.circAct=0;
 	this.imgAct=0;
 	
 	this.clkFin=function()
@@ -68,13 +67,25 @@ Desp=function(imgSrcs,urls,tits,descs,alts,FX)
 		window.location=this.url;
 	};
 	
+	this.desp2=function(Num)
+	{
+			 Ant=this.imgAct;
+			this.imgAct=Num;
+			
+			this.tit.innerHTML=this.tits[Num];
+			this.circ[Ant].removeAttribute("class");
+			this.circ[Num].setAttribute("class","despCircAct");
+			this.circ[Ant].innerHTML="<p>○</p>";
+			this.circ[Num].innerHTML="<p>◉</p>";
+			this.desc[Ant].removeAttribute("class");
+			this.desc[Ant].setAttribute("class","despOpc");
+			this.desc[Num].removeAttribute("class");
+			this.desc[Num].setAttribute("class","despOpcAct");
+	};
 	this.desp=function(Num)
 	{
 		if(this.imgAct!=Num)
 		{
-			var Ant=this.imgAct;
-			this.imgAct=Num;
-			this.circAct=Num;
 			
 			if(this.clk[Num].enCurso)
 			{
@@ -85,16 +96,7 @@ Desp=function(imgSrcs,urls,tits,descs,alts,FX)
 				this.clk[Num].detona();
 			};
 			
-			this.tit.innerHTML=this.tits[Num];
-			this.circ[Ant].removeAttribute("class");
-			this.circ[Num].setAttribute("class","despCircAct");
-			this.circ[Ant].innerHTML="<p>○</p>"
-			this.circ[Num].innerHTML="<p>◉</p>";
-			this.desc[Ant].removeAttribute("class");
-			this.desc[Ant].setAttribute("class","despOpc");
-			this.desc[Num].removeAttribute("class");
-			this.desc[Num].setAttribute("class","despOpcAct");
-			
+			this.desp2(Num);
 			if(this.clk[Ant].enCurso)
 			{
 				this.clk[Ant].fnFin();
@@ -105,6 +107,7 @@ Desp=function(imgSrcs,urls,tits,descs,alts,FX)
 			};
 		}
 	}.bind(this);
+	
 	
 	this.autoDesp=function()
 	{
@@ -212,6 +215,13 @@ Desp=function(imgSrcs,urls,tits,descs,alts,FX)
 		
 			for(var i=0;i<this.clk[c].cfg.length;i++)
 			{
+				if(!c)
+				{
+					this.clk[c].cfg[i].x=this.clk[c].cfg[i].xmax;
+					this.clk[c].cfg[i].obj.style[this.clk[c].cfg[i].prop]=this.clk[c].cfg[i].calc()[1];
+					this.clk[c].cfg[i].x=0;
+					this.desp2(this.imgAct);
+				}
 				this.clk[c].cfg[i].obj=this.img[c];
 			};
 		};

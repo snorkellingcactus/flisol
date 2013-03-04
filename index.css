@@ -1,60 +1,6 @@
 *{margin:0px;padding:0px;border:0px}
 body{background-color:lightgrey;font-family:sans-serif}
 a{font-weight:bold;color:black;font-style:oblique;}
-.Header
-{
-	width:100%;
-	height:100%;
-	z-index:0
-}
-.menus
-{
-	width:100%;
-	height:60%;
-	background-image:url('./img/barra.png');
-}
-.menus a
-{
-	float:left;
-	width:17%;
-	height:100%;
-	color:silver;
-	border-left:2px solid dimgray;
-	text-decoration:none;
-	font-size:70%;
-	font-family:sans-serif;
-	font-style: normal;
-	text-align:center;
-	z-index:2;
-}
-.menus a:hover
-{
-	text-decoration:underline;
-}
-.menus a h3
-{
-	position:relative;
-	top:-50%;
-	margin-top:-0.7em;
-}
-.menus a img
-{
-	width:100%;
-	height:100%;
-	position:relative;
-	opacity:0;
-	z-index:1
-}
-.menus .Primero
-{
-	border-left:0px solid;
-	margin-left:10%;
-}
-
-.menus a img:hover
-{
-	opacity:0.8;
-}
 .contenido
 {
 	float:left;
@@ -94,6 +40,7 @@ a{font-weight:bold;color:black;font-style:oblique;}
 	border:2px solid dimgray;
 	border-radius:4px;
 	position:absolute;
+	background-image: url("./img/fondo_contenido.png")
 }
 .despIzq .titulo
 {
@@ -154,6 +101,7 @@ li p
 .despDer li
 {
 	padding-left:2px;
+	background-image: url("./img/fondo_contenido.png")
 }
 .despDer li p
 {
