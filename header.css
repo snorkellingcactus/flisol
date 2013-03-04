@@ -5,16 +5,22 @@
 	height:100%;
 	z-index:0
 }
-.menus
+.separador
 {
 	width:100%;
 	height:60%;
+}
+.menus
+{
+	width:95%;
+	height:100%;
 	background-image:url('./img/barra.png');
+	float:left;
 }
 .menus a
 {
 	float:left;
-	width:16.9%;
+	width:17.5%;
 	height:100%;
 	color:silver;
 	border-left:2px solid dimgray;
@@ -63,12 +69,26 @@
 }
 .social
 {
-	opacity:0.4;
-	width:2%;
-	height:70%;
-	margin-top:0.5%;
+	width:5%;
+	height:100%;
+	background-color: red;
+	float:left;
+	background-image: url("./img/barra.png")
 }
-.social:hover
+.social img
+{
+	opacity:0.4;
+	width:100%;
+	height:100%;
+	margin-top:15%;
+}
+.social a
+{
+	width:50%;
+	height:80%;
+	float:left;
+}
+.social img:hover
 {
 	opacity:0.9;
 }
