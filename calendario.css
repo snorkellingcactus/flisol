@@ -35,3 +35,11 @@
 {
 	border-spacing:20px;
 }
+h1
+{
+	text-align:right;
+	font-family: Georgia;
+	font-size:250%;
+	color:dimgray;
+	margin:3% 2% 4.5% 0%;
+}

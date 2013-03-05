@@ -1,29 +1,3 @@
-*{margin:0px;padding:0px;border:0px}
-body{background-color:lightgrey;font-family:sans-serif}
-a{font-weight:bold;color:black;font-style:oblique;}
-.contenido
-{
-	float:left;
-	width:auto;
-	height:auto;
-	max-width: 92%;
-	margin:2% 0% 0% 2%;
-	padding:0% 2% 2% 2%;
-	border:2px solid dimgray;
-	border-radius:5px;
-	background-image: url("./img/fondo_contenido.png")
-}
-.contenido h5
-{
-	margin:0.5%;
-	text-align:center;
-	font-family:sans-serif;
-	font-size:95%;
-}
-.contenido p
-{
-	font-family:georgia;
-}
 .desp
 {
 	position:relative;

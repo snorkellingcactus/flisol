@@ -1,21 +1,23 @@
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="./index.css" />
+		<title>Flisol La Plata - Calendario</title>
+		<link rel="stylesheet" type="text/css" href="./reinicia.css" />
 		<link rel="stylesheet" type="text/css" href="./calendario.css" />
 		<script type="text/javascript" src="./calendario.js"></script>
 	</head>
 	<body>
-	<iframe name="header" width="100%" height="10%" src="./header.html"></iframe>
+
+		<script type="text/javascript" language="JavaScript">
 	
-	<script type="text/javascript">
+		Cal=new CalFlisol();
+		Cal.vista="ano";
+		Cal.actualiza();
 	
-	Cal=new CalFlisol();
-	Cal.vista="ano";
-	Cal.actualiza();
-	document.body.appendChild(Cal.caja);
-	</script>
+		H1=document.createElement("h1");
+		H1.innerHTML=Cal.tiempo.getFullYear();
 	
+		document.body.appendChild(H1);
+		document.body.appendChild(Cal.caja);
+		</script>
 	</body>
 </html>
