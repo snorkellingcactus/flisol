@@ -1,7 +1,4 @@
-/*
-@source https://github.com/snorkellingcactus/flisol
-
-@licstart
+<!--
 	Copyright (C) 2013 Nadal Gonzalo García Zavala
 
 	This file is part of flisollaplata.org.ar.
@@ -18,37 +15,22 @@
 
 	You should have received a copy of the GNU General Public License
 	along with flisollaplata.org.ar.  If not, see <http://www.gnu.org/licenses/>.
-@licend
-*/
-TransMods.refNum=function()
-{
-	this.reg=[];
-	this.proc=false;
+-->
+<div class="corte">
+</div>
+<div class="barraInf">
+	<div>
+		<p>
+			Copyright &copy; 2013 Nadal Gonzalo García Zavala. Web licenciada bajo la 
+			<a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU GPL V3</a>. 
+			<a href="https://github.com/snorkellingcactus/flisol">Código Fuente.</a>
+			<a href="./quienes_somos.php">Créditos.</a>
+		</p>
+	</div>
+	<div>
+		<a href="#">
+			Iniciar Sesión
+		</a>
+	</div>
 	
-	this.activa=this.anula=function()
-	{
-		this.proc=!this.proc;
-	}
-	
-	this.detona=function(cfg)
-	{
-		if(this.proc)
-		{
-			this.reg.push(cfg[0].length);
-		}
-	}
-	
-	this.postConf=function(cfg)
-	{
-			this.reg[this.reg.length-1]=cfg.slice(-this.reg[this.reg.length-1]);
-	}
-	this.selB=function(num)
-	{
-		res=[];
-		for(n=0;n<arguments.length;n++)
-		{
-			res=res.concat(this.reg[arguments[n]]);
-		}
-		return res;
-	}
-}
+</div>

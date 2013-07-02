@@ -1,27 +1,27 @@
 /*
 	Copyright (C) 2013 Nadal Gonzalo García Zavala
 
-	This file is part of flisol.
+	This file is part of flisollaplata.org.ar.
 
-	flisol is free software: you can redistribute it and/or modify
+	flisollaplata.org.ar is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	flisol is distributed in the hope that it will be useful,
+	flisollaplata.org.ar is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with flisol.  If not, see <http://www.gnu.org/licenses/>.
-
+	along with flisollaplata.org.ar.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 .CalFlisol
 {
 	width:96%;
 	margin-left:2%;
-	margin-top:2%;
+	margin-top:4%;
 	background-image: url("./img/fondo_contenido.png");
 	border:2px solid gray;
 	border-radius:5px;
@@ -31,6 +31,7 @@
 {
 	width:100%;
 	background-color:transparent;
+	table-layout:fixed; //Corrección del cambio de tamaño de la tabla al pasar el mouse por sobre los días.
 }
 .mes
 {
@@ -57,11 +58,12 @@
 h1
 {
 	text-align:right;
-	height:15%;
+	position:relative;
+	height:20%;
 	font-family: Georgia;
 	font-size:250%;
 	color:dimgray;
-	margin:1% 2% 1.5% 0%;
+	margin:3% 2% 1.5% 0%;
 	padding-right:1%;
 	border-bottom-right-radius:10px;
 	border-top-right-radius:10px;

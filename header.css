@@ -1,41 +1,48 @@
 /*
 	Copyright (C) 2013 Nadal Gonzalo García Zavala
 
-	This file is part of flisol.
+	This file is part of flisollaplata.org.ar.
 
-	flisol is free software: you can redistribute it and/or modify
+	flisollaplata.org.ar is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	flisol is distributed in the hope that it will be useful,
+	flisollaplata.org.ar is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with flisol.  If not, see <http://www.gnu.org/licenses/>.
-
+	along with flisollaplata.org.ar.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 .Header
 {
 	width:100%;
-	height:100%;
+	height:10%;
 	z-index:0;
 }
-.separador
+
+/*
+Separador entre menu superior e inferior, a su vez contenedor del
+menú con secciones y las redes sociales
+								*/
+.Header>div:first-of-type
 {
 	width:100%;
 	height:60%;
 	background-image:url('./img/barra.png');
 }
-.menus
+
+/*---------Menú con secciones-----------*/
+.Header>div:first-of-type>div:first-child
 {
 	width:95%;
 	height:100%;
 	float:left;
 }
-.menus a
+.Header>div:first-of-type>div:first-child a
 {
 	float:left;
 	width:17.5%;
@@ -49,16 +56,16 @@
 	text-align:center;
 	z-index:2;
 }
-.menus a:hover
+.Header>div:first-of-type>div:first-child a:hover
 {
 	text-decoration:underline;
 }
-.menus a h3
+.Header>div:first-of-type>div:first-child a h3
 {
 	position:relative;
-	margin-top:-2em
+	margin-top:-2.25em;
 }
-.menus a img
+.Header>div:first-of-type>div:first-child a img
 {
 	width:100%;
 	height:100%;
@@ -66,17 +73,18 @@
 	opacity:0;
 	z-index:1
 }
-.menus .primero
+.Header>div:first-of-type>div:first-child a:first-child
 {
 	border-left:0px solid;
 	margin-left:10%;
 }
-
-.menus a img:hover
+.Header>div:first-of-type>div:first-child a img:hover
 {
 	opacity:0.8;
 }
-.subMenu
+
+/*-------Sub Menu-------*/
+.Header>div:last-of-type
 {
 	opacity:0.3;
 	width:100%;
@@ -84,38 +92,47 @@
 	background-color:gray;
 	z-index:0;
 }
-.social
+.Header>div:last-of-type:hover
+{
+	opacity:0.7;
+}
+.Header>div:last-of-type img:hover
+{
+	opacity:1;
+}
+
+/*-----------Botones sociales----------*/
+.Header>div:first-of-type div:last-child
 {
 	width:5%;
 	height:100%;
 	float:left;
 	background-image: url("./img/barra.png")
 }
-.social img
+.Header>div:first-of-type div:last-child img
 {
 	opacity:0.4;
 	width:100%;
 	height:100%;
 	margin-top:15%;
 }
-.social a
+.Header>div:first-of-type div:last-child a
 {
 	width:46%;
 	height:80%;
 	float:left;
 }
-.social img:hover
+.Header>div:first-of-type div:last-child img:hover
 {
 	opacity:0.9;
 }
-.subMenu:hover
-{
-	opacity:0.7;
-}
-.subMenu img:hover
-{
-	opacity:1;
-}
 
-#logo{position:absolute;width:10%;height:100%;z-index:5}
-#logo img{width:100%;height:100%}
+/*-------Logo-------*/
+.Header>a:first-child 
+{
+	position:absolute;width:10%;height:10%;z-index:5
+}
+.Header>a:first-child img
+{
+	width:100%;height:100%
+}

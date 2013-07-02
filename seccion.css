@@ -17,7 +17,7 @@
 	along with flisol.  If not, see <http://www.gnu.org/licenses/>.
 
 */
-.contenido
+.seccion
 {
 	float:left;
 	width:auto;
@@ -29,14 +29,14 @@
 	border-radius:5px;
 	background-image: url("./img/fondo_contenido.png")
 }
-.contenido h5
+.seccion h5
 {
 	margin:0.5%;
 	text-align:center;
 	font-family:sans-serif;
 	font-size:95%;
 }
-.contenido p
+.seccion p
 {
 	font-family:georgia;
 }

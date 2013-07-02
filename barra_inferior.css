@@ -1,7 +1,4 @@
 /*
-@source https://github.com/snorkellingcactus/flisol
-
-@licstart
 	Copyright (C) 2013 Nadal Gonzalo García Zavala
 
 	This file is part of flisollaplata.org.ar.
@@ -18,37 +15,59 @@
 
 	You should have received a copy of the GNU General Public License
 	along with flisollaplata.org.ar.  If not, see <http://www.gnu.org/licenses/>.
-@licend
 */
-TransMods.refNum=function()
+
+.barraInf
 {
-	this.reg=[];
-	this.proc=false;
-	
-	this.activa=this.anula=function()
-	{
-		this.proc=!this.proc;
-	}
-	
-	this.detona=function(cfg)
-	{
-		if(this.proc)
-		{
-			this.reg.push(cfg[0].length);
-		}
-	}
-	
-	this.postConf=function(cfg)
-	{
-			this.reg[this.reg.length-1]=cfg.slice(-this.reg[this.reg.length-1]);
-	}
-	this.selB=function(num)
-	{
-		res=[];
-		for(n=0;n<arguments.length;n++)
-		{
-			res=res.concat(this.reg[arguments[n]]);
-		}
-		return res;
-	}
+	background-image:url("./img/barra.png");
+	width:100%;
+	height:2em;
+	color:white;
+	margin-top:-2em;
+	font-family: "Liberation Mono";
+	font-size: 0.75em;
+	line-height:2em;
+	vertical-align:middle;
+}
+.barraInf a
+{
+	color:silver;
+	text-decoration:none;
+	height:100%;
+}
+.barraInf a:hover
+{
+	text-decoration:underline;
+}
+.barraInf>div
+{
+	display:inline;
+	height:100%;
+	text-align:center;
+	float:left;
+}
+.barraInf div:first-child
+{
+	width:90%;
+	height:100%;
+}
+.barraInf div:last-child
+{
+	width:10%;
+}
+.barraInf img
+{
+	opacity:0;
+	width:100%;
+	height:100%;
+	position:relative;
+	top:0;
+}
+.barraInf p:hover img
+{
+	opacity:1;
+}
+.corte
+{
+	clear:both;
 }

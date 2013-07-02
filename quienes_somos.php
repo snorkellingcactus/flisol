@@ -1,32 +1,38 @@
 <!--
 	Copyright (C) 2013 Nadal Gonzalo García Zavala
 
-	This file is part of flisol.
+	This file is part of flisollaplata.org.ar.
 
-	flisol is free software: you can redistribute it and/or modify
+	flisollaplata.org.ar is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	flisol is distributed in the hope that it will be useful,
+	flisollaplata.org.ar is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with flisol.  If not, see <http://www.gnu.org/licenses/>.
+	along with flisollaplata.org.ar.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="www.w3.org/1999/xhtml" xml:lang="es" lang="es-AR">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="./reinicia.css" />
-		<link rel="stylesheet" type="text/css" href="./contenido.css" />
+		<link rel="stylesheet" type="text/css" href="./header.css" />
+		<link rel="stylesheet" type="text/css" href="./seccion.css" />
+		<link rel="stylesheet" type="text/css" href="./barra_inferior.css" />
 		<title>Flisol - ¿Quénes Somos?</title>
 	</head>
 	<body>
-	
-		<div class="contenido">
+	<?php
+		include_once("./header.html");
+	?>
+	<div id="contenido">
+		<div class="seccion">
 			<h5>¿Qué es Flisol?</h5>
 			<p>
 				El Festival Latinoamericano de Instalación de Software Libre (FLISOL), es el mayor evento de difusión del Software libre que se realiza desde el año 2005 en diferentes países de manera simultánea.
@@ -37,7 +43,7 @@
 				Participando es posible entrar en contacto con el mundo del software libre, conocer a otros usuarios, resolver dudas e interrogantes, intercambiar opiniones y experiencias; asistir a charlas y otras actividades programadas.
 			</p>
 		</div>
-		<div class="contenido">
+		<div class="seccion">
 			<h5>Sobre la web.</h5>
 			<p>
 				La web está echa por &lt;mi nombre&gt; y está licenciada bajo la GPL V3. 
@@ -55,6 +61,9 @@
 				Botones de redes sociales: Licencia libre,  <a href="http://www.elegantthemes.com/blog/resources/free-social-media-icon-set">enlace</a>.
 			</p>
 		</div>
-	
+	</div>
+	<?php
+		include_once("./barra_inferior.html");
+	?>
 	</body>
 </html>
